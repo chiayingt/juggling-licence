@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+  <a class="govuk-back-link" href="/juggling-balls">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,19 +19,16 @@
 
         <p>{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-{{ govukTextarea({
-  name: "most-impressive-trick",
-  id: "most-impressive-trick",
-  label: {
-    text: "What is your most impressive juggling trick?",
-    classes: "govuk-label--l",
-    isPageHeading: true
-  },
-  hint: {
-    text: "Tell us more information."
-  },
-  value: data['most-impressive-trick']
-}) }}</p>
+          {{ govukTextarea({
+              name: "most-impressive-trick",
+              id: "most-impressive-trick",
+              label: {
+                  text: "What is your most impressive juggling trick?",
+                  classes: "govuk-label--l",
+                  isPageHeading: true
+              },
+              value: data['most-impressive-trick']
+          }) }}</p>
 
         <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
 
